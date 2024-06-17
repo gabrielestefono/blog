@@ -1,0 +1,114 @@
+@mixin mobileP {
+	@media screen and (min-width: 320px) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media screen and (min-width: 480px) {
+		@content;
+	}
+}
+
+@mixin mobileG {
+	@media screen and (min-width: 576px) {
+		@content;
+	}
+}
+
+@mixin TabletM {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin Tablet {
+	@media screen and (min-width: 992px) {
+		@content;
+	}
+}
+
+@mixin TabletG {
+	@media screen and (min-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin Notebook {
+	@media screen and (min-width: 1400px) {
+		@content;
+	}
+}
+
+@mixin Desktop {
+	@media screen and (min-width: 1401px) {
+		@content;
+	}
+}
+
+.sidemenu{
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 80px;
+	left: 100%;
+	transition: all 300ms;
+
+	&.show{
+		left: 0;
+		transition: all 300ms;
+	}
+
+	@include Tablet(){
+		display: none;
+	}
+
+	> ul{
+		display: flex;
+		flex-direction: column;
+		grid-area: 10px;
+
+		> li{
+			height: 60px;
+
+			> a{
+				color: var(--black);
+				font-family: var(--inter);
+				font-size: 1.125rem;
+				text-decoration: none;
+				font-weight: 600;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-bottom: 1px solid var(--black);
+
+				&:hover{
+					color: rgba(var(--black-rgb), 0.9);
+				}
+			}
+
+			> button{
+				border: none;
+				background-color: var(--black);
+				color: var(--white);
+				font-weight: 600;
+				font-size: 1.5rem;
+				padding: 1rem 3rem;
+				cursor: pointer;
+				margin-top: calc(100vh - 20rem);
+
+				&:hover{
+					background-color: rgba(var(--black-rgb), 0.9);
+				}
+			}
+
+			&:last-child{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
+}
