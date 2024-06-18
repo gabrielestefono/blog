@@ -1,4 +1,5 @@
 import Header from "@/components/layouts/website/header";
+import SliderPrincipal from "@/components/website/sliderPrincipal";
 import Head from "next/head";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       </Head>
       <main>
         <Header/>
+        <SliderPrincipal/>
       </main>
     </>
   );
