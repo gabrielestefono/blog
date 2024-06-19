@@ -1,0 +1,38 @@
+.listPost{
+    width: 35.9%;
+
+    > section:first-child{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        > h2{
+            font-size: 2.25rem;
+            font-weight: 700;
+            font-family: var(--sen);
+            line-height: 2.75rem;
+            color: var(--black);
+        }
+
+        > a{
+            font-size: 1rem;
+            font-weight: 400;
+            font-family: var(--inter);
+            line-height: 1.75rem;
+            color: var(--purple);
+            text-decoration: none;
+
+            &:hover{
+                color: var(--black);
+            }
+        }
+    }
+
+    > section:last-child{
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        width: 100%;
+    }
+}

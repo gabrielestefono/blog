@@ -1,0 +1,32 @@
+.listPostCard{
+    width: calc(100% - 4rem);
+    padding: 2rem 2rem 1.5625rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+
+    &:hover{
+        background-color: var(--light-yellow);
+    }
+
+    > h3{
+        margin-top: 1rem;
+        color: var(--dark-gray);
+        font-size: .875rem;
+        font-weight: 500;
+        font-family: var(--inter);
+
+        > span{
+            color: var(--purple);
+        }
+    }
+
+    h2{
+        font-size: 1.5rem;
+        font-weight: 700;
+        font-family: var(--sen);
+        line-height: 2rem;
+        color: var(--black);
+    }
+}
