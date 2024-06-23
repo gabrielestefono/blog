@@ -1,14 +1,71 @@
+@mixin mobileP {
+	@media screen and (min-width: 320px) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media screen and (min-width: 480px) {
+		@content;
+	}
+}
+
+@mixin mobileG {
+	@media screen and (min-width: 576px) {
+		@content;
+	}
+}
+
+@mixin TabletM {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin Tablet {
+	@media screen and (min-width: 992px) {
+		@content;
+	}
+}
+
+@mixin TabletG {
+	@media screen and (min-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin Notebook {
+	@media screen and (min-width: 1400px) {
+		@content;
+	}
+}
+
+@mixin Desktop {
+	@media screen and (min-width: 1401px) {
+		@content;
+	}
+}
+
 .posts{
     width: 100%;
-    margin-top: 8rem;
+    margin-top: 4rem;
     display: flex;
-    justify-content: center;
-    padding-bottom: 8rem;
+	justify-content: center;
+
+	@include Tablet{
+		margin-top: 8rem;
+	}
 
     > div{
-        width: 89%;
         display: flex;
+        width: calc(100% - 4rem);
         justify-content: space-between;
         gap: 2rem;
+        flex-direction: column;
+
+        @include Tablet{
+            flex-direction: row;
+            width: 89%;
+        }
     }
 }

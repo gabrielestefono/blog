@@ -1,24 +1,85 @@
+@mixin mobileP {
+	@media screen and (min-width: 320px) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media screen and (min-width: 480px) {
+		@content;
+	}
+}
+
+@mixin mobileG {
+	@media screen and (min-width: 576px) {
+		@content;
+	}
+}
+
+@mixin TabletM {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin Tablet {
+	@media screen and (min-width: 992px) {
+		@content;
+	}
+}
+
+@mixin TabletG {
+	@media screen and (min-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin Notebook {
+	@media screen and (min-width: 1400px) {
+		@content;
+	}
+}
+
+@mixin Desktop {
+	@media screen and (min-width: 1401px) {
+		@content;
+	}
+}
+
 .detachedPost{
-    width: 57%;
+    width: 100%;
     display: flex;
     flex-direction: column;
+
+    @include Tablet(){
+        width: 57%;
+    }
 
     > article:first-child{
         padding-bottom: 2rem;
 
         h2{
-            font-size: 2.25rem;
+            font-size: 1.75rem;
             font-weight: 700;
             font-family: var(--sen);
             line-height: 2.75rem;
             color: var(--black);
+
+            @include mobile(){
+                font-size: 2.25rem;
+            }
         }
     }
 
     > article:last-child{
-        width: calc(100% - 4rem);
-        padding: 2rem;
+        width: calc(100% - 2rem);
+        padding: 1rem;
         border: 1px solid rgb(109, 110, 118, 0.2);
+
+        @include mobile(){
+            padding: 2rem;
+            width: calc(100% - 4rem);
+        }
 
         > div{
             width: 100%;
@@ -29,6 +90,20 @@
             > div > img{
                 width: 100%;
                 object-fit: cover;
+                height: 9.375rem;
+
+                @include mobileP(){
+                    height: 200px;
+                }
+
+                @include mobile(){
+                    height: 250px;
+                }
+
+                @include mobileG(){
+                    height: initial;
+                    max-height: 350px;
+                }
             }
 
             > h3{
@@ -44,11 +119,21 @@
             }
 
             h2{
-                font-size: 2.25rem;
+                font-size: 1.5rem;
                 font-weight: 700;
                 font-family: var(--sen);
-                line-height: 2.75rem;
+                line-height: 1.75rem;
                 color: var(--black);
+
+                @include mobileG(){
+                    font-size: 1.75rem;
+                    line-height: 2rem;
+                }
+
+                @include Tablet(){
+                    font-size: 2.25rem;
+                    line-height: 2.75rem;
+                }
             }
 
             p{
@@ -63,10 +148,10 @@
                 background-color: var(--yellow);
                 border: none;
                 color: var(--black);
-                // padding: .875rem 2.25rem;
+                padding: .875rem 2.25rem;
                 font-family: var(--sen);
                 font-weight: 700;
-                // font-size: .875rem;
+                font-size: .875rem;
                 margin-top: 3rem;
                 cursor: pointer;
                 display: flex;
@@ -74,19 +159,19 @@
                 gap: .3125rem;
                 width: fit-content;
     
-                // @include mobileG(){
+                @include mobileG(){
                     font-size: 1.125rem;
                     padding: 1rem 3rem;
-                // }
+                }
     
                 > img{
-                    // width: .875rem;
-                    // height: .875rem;
+                    width: .875rem;
+                    height: .875rem;
     
-                    // @include mobileG(){
+                    @include mobileG(){
                         width: 1rem;
                         height: 1rem;
-                    // }
+                    }
                 }
     
                 &:hover{
