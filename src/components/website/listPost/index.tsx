@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ListPostCard from "../listPostCard";
+import ListPostCard from "./listPostCard";
 import styles from './listPost.module.scss';
 
 export default function ListPost(){

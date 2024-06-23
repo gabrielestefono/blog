@@ -1,0 +1,90 @@
+@mixin mobileP {
+	@media screen and (min-width: 320px) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media screen and (min-width: 480px) {
+		@content;
+	}
+}
+
+@mixin mobileG {
+	@media screen and (min-width: 576px) {
+		@content;
+	}
+}
+
+@mixin TabletM {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin Tablet {
+	@media screen and (min-width: 992px) {
+		@content;
+	}
+}
+
+@mixin TabletG {
+	@media screen and (min-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin Notebook {
+	@media screen and (min-width: 1400px) {
+		@content;
+	}
+}
+
+@mixin Desktop {
+	@media screen and (min-width: 1401px) {
+		@content;
+	}
+}
+
+.about{
+    margin: 0 auto;
+    width: 89%;
+    margin-top: 8rem;
+
+    > div:first-child{
+        width: 100%;
+        display: flex;
+
+        > div:nth-child(1){
+            width: 22%;
+            height: 1.4375rem;
+        }
+
+        > div:nth-child(2){
+            width: 56%;
+            height: 1.4375rem;
+            background-color: var(--yellow);
+        }
+
+        > div:nth-child(3){
+            width: 22%;
+            height: 1.4375rem;
+            background-color: var(--purple);
+        }
+    }
+
+    > div:last-child{
+        background-color: var(--lavander);
+        display: flex;
+        box-sizing: border-box;
+        padding: 1rem;
+        flex-direction: column;
+        gap: 3.125rem;
+        
+        @include Tablet(){
+            flex-direction: row;
+            gap: 6.4%;
+            padding: 6rem 5rem;
+        }
+    }
+}
