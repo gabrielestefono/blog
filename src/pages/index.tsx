@@ -1,5 +1,6 @@
 import Header from "@/components/layouts/website/header";
 import About from "@/components/website/about";
+import Categories from "@/components/website/categories";
 import Posts from "@/components/website/index/posts";
 import SliderPrincipal from "@/components/website/sliderPrincipal";
 import Head from "next/head";
@@ -17,6 +18,7 @@ export default function Home() {
         <SliderPrincipal/>
         <Posts/>
         <About/>
+        <Categories/>
       </main>
     </>
   );

@@ -1,0 +1,102 @@
+@mixin mobileP {
+	@media screen and (min-width: 320px) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media screen and (min-width: 480px) {
+		@content;
+	}
+}
+
+@mixin mobileG {
+	@media screen and (min-width: 576px) {
+		@content;
+	}
+}
+
+@mixin TabletM {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin Tablet {
+	@media screen and (min-width: 992px) {
+		@content;
+	}
+}
+
+@mixin TabletG {
+	@media screen and (min-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin Notebook {
+	@media screen and (min-width: 1400px) {
+		@content;
+	}
+}
+
+@mixin Desktop {
+	@media screen and (min-width: 1401px) {
+		@content;
+	}
+}
+
+.category{
+    border: 1px solid var(--gray-medium-border);
+    padding: 2rem;
+    
+    &:hover{
+        background-color: var(--yellow);
+        border: 1px solid var(--yellow);
+    }
+
+    > img{
+        width: 3rem;
+        height: 3rem;
+        border-radius: .5625rem;
+        background-color: var(--yellow-light);
+    }
+
+    > h3{
+        margin-top: 1rem;
+        font-family: var(--sen);
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        color: var(--black);
+
+        @include mobileG(){
+            font-size: 1.75rem;
+        }
+
+        @include Tablet(){
+            font-size: 1.5rem;
+        }
+
+        @include TabletG(){
+            font-size: 1.75rem;
+        }
+    }
+
+    > p{
+        margin-top: .25rem;
+        font-family: var(--inter);
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.75rem;
+        color: var(--gray-medium);
+
+        @include Tablet(){
+            font-size: .875rem;
+        }
+
+        @include TabletG(){
+            font-size: 1rem;
+        }
+    }
+}
