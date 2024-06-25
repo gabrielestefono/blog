@@ -1,0 +1,87 @@
+.history{
+    margin-top: 8rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    > div{
+        width: 89%;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+
+        > div:first-child{
+            width: 74%;
+            background-color: blue;
+
+            > img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        > div:last-child{
+            position: absolute;
+            padding: 5rem;
+            right: 0;
+            bottom: 0;
+            background-color: var(--white);
+            max-width: 45%;
+
+            > h3{
+                color: var(--black);
+                font-size: 1rem;
+                line-height: 1.25rem;
+                font-weight: 600;
+                font-family: var(--inter);
+                letter-spacing: .125rem;
+                text-transform: uppercase;
+            }
+
+            > h2{
+                margin-top: 1.5rem;
+                color: var(--black);
+                font-size: 3rem;
+                line-height: 3.75rem;
+                font-weight: 700;
+                font-family: var(--sen);
+            }
+
+            > p{
+                margin-top: 1rem;
+                color: var(--gray-medium);
+                font-size: 1rem;
+                line-height: 1.75rem;
+                font-weight: 400;
+                font-family: var(--inter);
+            }
+
+            > button{
+                margin-top: 2rem;
+                width: fit-content;
+                padding: 1rem 3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                background-color: var(--yellow);
+                color: var(--black);
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+                font-weight: 700;
+                font-family: var(--sen);
+                cursor: pointer;
+
+                &:hover{
+                    opacity: 0.8;
+                }
+
+
+                > img{
+                    height: .875rem;
+                    width: .875rem;
+                }
+            }
+        }
+    }
+}
